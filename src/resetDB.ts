@@ -24,15 +24,11 @@ async function main() {
     flag: "🇫🇷",
   });
 
-  await france.save();
-
   const germany = Country.create({
     isocode: "DE",
     name: "Germany",
     flag: "🇩🇪",
   });
-
-  await germany.save();
 
   const usa = Country.create({
     isocode: "US",
@@ -40,15 +36,11 @@ async function main() {
     flag: "🇺🇸",
   });
 
-  await usa.save();
-
   const brazil = Country.create({
     isocode: "BR",
     name: "Brazil",
     flag: "🇧🇷",
   });
-
-  await brazil.save();
 
   const nigeria = Country.create({
     isocode: "NG",
@@ -56,15 +48,11 @@ async function main() {
     flag: "🇳🇬",
   });
 
-  await nigeria.save();
-
   const southAfrica = Country.create({
     isocode: "ZA",
     name: "South Africa",
     flag: "🇿🇦",
   });
-
-  await southAfrica.save();
 
   const australia = Country.create({
     isocode: "AU",
@@ -72,15 +60,11 @@ async function main() {
     flag: "🇦🇺",
   });
 
-  await australia.save();
-
   const antarctica = Country.create({
     isocode: "AQ",
     name: "Antarctica",
     flag: "🇦🇶",
   });
-
-  await antarctica.save();
 
   const europe = Continent.create({ name: "Europe", isocode: "EU" });
   const northAmerica = Continent.create({
@@ -116,6 +100,16 @@ async function main() {
   southAfrica.continent = africa;
   australia.continent = australiaContinent;
   antarctica.continent = antarcticaContinent;
+
+  await france.save();
+  await germany.save();
+
+  await usa.save();
+  await brazil.save();
+  await nigeria.save();
+  await southAfrica.save();
+  await australia.save();
+  await antarctica.save();
 }
 
 main();

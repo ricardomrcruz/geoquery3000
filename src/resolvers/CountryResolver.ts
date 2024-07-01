@@ -20,13 +20,12 @@ export default class CountryResolver {
     return country;
   }
 
-  @Query(() => Country)
+  @Query(() => [Country])
   async getCountriesByContinent(
     @Arg("continent", () => String) continentName: string
   ) {
     const continent = await Continent.findOne({
       where: { name: Like(`%${continentName}%`) },
-      relations: ["continent"],
     });
     if (!continent) throw new GraphQLError("contient not found");
 
