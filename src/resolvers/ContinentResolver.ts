@@ -3,8 +3,8 @@ import Country, { CountryInput } from "../entities/Country";
 import { GraphQLError } from "graphql/error";
 import Continent, { ContinentInput } from "../entities/Continent";
 
-@Resolver(Country)
-export default class CountryResolver {
+@Resolver(Continent)
+export default class ContinentResolver {
   @Query(() => [Continent])
   async continents() {
     return Continent.find();
