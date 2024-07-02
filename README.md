@@ -1,10 +1,8 @@
-
 # Backend Checkpoint Test - Wild Code School November Class
 
 This repository contains the backend server and SQLite database for querying countries and their corresponding continents. It was developed as part of the Wild Code School November class checkpoint test.
 
 ## Getting Started
-
 
 ### Installation
 
@@ -69,7 +67,7 @@ After completing the installation steps, you can access Apollo Studio via localh
        flag
        continent {
          id
-         isocode                
+         isocode
          name
        }
      }
@@ -77,9 +75,39 @@ After completing the installation steps, you can access Apollo Studio via localh
    ```
 
    Example variables:
+
    ```json
-   {  
+   {
      "continent": "North America"
+   }
+   ```
+
+4. Mutation added later able to create country with relation to continent :
+
+   ```graphql
+   mutation AddCountryWContinent($data: CountryInput!) {
+     addCountryWContinent(data: $data) {
+       name
+       isocode
+       id
+       flag
+       continent {
+         isocode
+       }
+     }
+   }
+   ```
+
+   Example variables:
+
+   ```json
+   {
+     "data": {
+       "name": "Jamaica",
+       "isocode": "JM",
+       "flag": "🏝️",
+       "continent": "NA"
+     }
    }
    ```
 
@@ -88,6 +116,3 @@ After completing the installation steps, you can access Apollo Studio via localh
 Feel free to submit issues and pull requests for any improvements or bug fixes.
 
 Ricardo Martinho Cruz 2024 | OpenSource 4Life
-
-
-

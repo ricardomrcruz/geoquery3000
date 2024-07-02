@@ -5,4 +5,6 @@ export default new DataSource({
   database: "geoquery3000.sqlite",
   entities: ["src/entities/*.ts"],
   synchronize: true,
+  
+  
 });

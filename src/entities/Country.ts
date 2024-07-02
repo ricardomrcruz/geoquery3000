@@ -12,7 +12,6 @@ import { ObjectType, Field, Int, InputType } from "type-graphql";
 import { ObjectId } from "../types";
 import Continent from "./Continent";
 
-
 @Entity()
 @ObjectType()
 export default class Country extends BaseEntity {
@@ -35,10 +34,10 @@ export default class Country extends BaseEntity {
   @ManyToOne(() => Continent, (c) => c.countries, {
     cascade: true,
     onDelete: "CASCADE",
+    eager: true,
   })
-  @Field()
+  @Field(() => Continent)
   continent: Continent;
-
 }
 
 @InputType()

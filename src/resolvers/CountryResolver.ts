@@ -47,4 +47,24 @@ export default class CountryResolver {
       where: { id },
     });
   }
+
+  @Mutation(() => Country)
+  async addCountryWContinent(
+    @Arg("data", { validate: true }) data: CountryInput
+  ) {
+    const continent = await Continent.findOne({
+      where: { isocode: Like(`%${data.continent}%`) },
+    });
+    if (!continent) throw new GraphQLError("no continent found");
+
+    const newCountry = Country.create({
+      name: data.name,
+      isocode: data.isocode,
+      flag: data.flag,
+      continent: continent,
+    });
+
+    await newCountry.save();
+    return newCountry;
+  }
 }
