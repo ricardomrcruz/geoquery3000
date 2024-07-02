@@ -103,7 +103,6 @@ async function main() {
 
   await france.save();
   await germany.save();
-
   await usa.save();
   await brazil.save();
   await nigeria.save();
