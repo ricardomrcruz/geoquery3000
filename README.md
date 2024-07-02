@@ -11,7 +11,7 @@ This repository contains the backend server and SQLite database for querying cou
 1. Clone this repository to your local machine:
 
    ```
-   git clone [<repository-url>](https://github.com/ricardomrcruz)
+   git clone https://github.com/ricardomrcruz
    ```
 
 2. Install the dependencies:
@@ -87,6 +87,7 @@ After completing the installation steps, you can access Apollo Studio via localh
 
 Feel free to submit issues and pull requests for any improvements or bug fixes.
 
+Ricardo Martinho Cruz 2024 | OpenSource 4Life
 
-```
+
 
