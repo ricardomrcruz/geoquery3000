@@ -1,14 +1,10 @@
-```markdown
+
 # Backend Checkpoint Test - Wild Code School November Class
 
 This repository contains the backend server and SQLite database for querying countries and their corresponding continents. It was developed as part of the Wild Code School November class checkpoint test.
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js
-- npm (Node Package Manager)
 
 ### Installation
 
